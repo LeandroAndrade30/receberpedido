@@ -10,6 +10,18 @@ namespace ReceberPedido
         public int Quantidade;
         public double Preco;
 
+
+        public Pedido (string nome, int quantidade, double preco)
+        {
+            Nome = nome;
+            Quantidade = quantidade;
+            Preco = preco;
+
+        }
+
+
+
+
         public  double CalcularValorTotal()
         {
             double ValorTotal = 0;
@@ -36,5 +48,17 @@ namespace ReceberPedido
             return ValorTotal;
         }
 
+        public override string ToString()
+        {
+            string mensagem = $"Nome: {Nome}, Quantidade: {Quantidade}, Preço: {Preco}, ValorTotal: {CalcularValorTotal():F2}";
+            return mensagem;
+        }
+
+
+
+
     }
+    
 }
+
+
